@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Lazy
 import org.springframework.stereotype.Component
 
 @Component
-class ConfigProperties() {
+class ConfigProperties {
     @Bean
     @Lazy
     @ConfigurationProperties("ahold.integration.jms.jndi.publish.queue")
@@ -15,6 +15,6 @@ class ConfigProperties() {
 
     @Bean
     @Lazy
-    @ConfigurationProperties("aahold.integration.jms.jndi.publish.topic")
+    @ConfigurationProperties("ahold.integration.jms.jndi.publish.topic")
     fun jmsPublishTopicJndiProperties() = JmsJndiProperties()
 }
